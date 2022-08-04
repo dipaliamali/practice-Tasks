@@ -1,0 +1,55 @@
+<h1 style="background-color: chartreuse; color: darkblue; text-align: center;margin-top: 50px; ">Angular Built In Pipes</h1>
+<br>
+
+<div class="container">
+<h1 style="color: rgb(202, 49, 171)">UpperCase,LowerCase,TitleCase pipes</h1>
+<h3>Original Text: {{ProjectName}}</h3>
+<h3>UpperCase: {{ProjectName | uppercase }}</h3>
+<h3>lowerCase: {{ProjectName | lowercase }}</h3>
+<h3>TitleCase: {{ProjectName | titlecase }}</h3>
+</div>
+
+<br><br>
+
+<div class="container">
+    <h1 style="color: rgb(202, 49, 171)">Datepipes</h1>
+    <h3>Current Date: {{Date}}</h3>
+    <h3>Standard Date: {{Date | date }}</h3>
+    <h3>Short Date: {{Date | date: 'short' }}</h3>
+    <h3>Medium Date: {{Date| date:'medium' }}</h3>
+    <h3>dd/mm/yyyy format date: {{Date| date:'dd/MM/yyyy' }}</h3>
+    </div>
+    <br><br>
+
+ <div class=" container ">
+        <h1 style="color: brown;">Slice Pipes</h1>
+        <h4> Original Text : {{ProjectName}}</h4>
+        <h4>Slice Text 1: {{ProjectName| slice:4}}</h4>
+        <h4>Slice Text 2: {{ProjectName | slice:2:6}}</h4>
+</div>
+
+<div class=" container ">
+            <h1 style="color: chartreuse;">Multiple Pipes</h1>
+            <h4> Multiple pipes : {{ProjectName | slice:2:7 | uppercase}}</h4>
+</div>
+<br><br>
+
+<div class=" container ">
+    <h1 style="color: blueviolet;">JSON Pipes</h1>
+    <h4> JSON pipe : {{student | json}}</h4>
+</div>
+
+
+<div class="container">
+    <h3 style="color: coral;">Currency Pipe</h3>
+    <h4> Original Text:  {{salary}}</h4>
+    <h4> Ind Currency:  {{salary | currency:'INR'}}</h4>
+    <h4> USD Currency:  {{salary | currency:'USD'}}</h4>
+    
+        </div>
+
+
+
+
+
+

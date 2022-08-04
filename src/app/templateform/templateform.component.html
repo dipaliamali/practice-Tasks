@@ -1,0 +1,40 @@
+<section>
+    <h2 style="color: purple; text-align: center;">Template Driven Form</h2>
+<div class="container mx-auto">
+<form name="templateform" #frm="ngForm" (ngSubmit)="frm.form.valid && onSubmit(frm)"> 
+<div class="form-group">
+<label for="Firstname" class="mt-4"> Firstname:</label>
+<input type="text" class="form-control" name="fname" #fname="ngModel" ngModel
+required [ngClass]="{'is-invalid' : frm.submitted && fname.invalid}" placeholder="Enter Your Firstname">
+<div *ngIf="frm.submitted && fname.invalid" class="invalid-feedback"> Firstname is Required</div>
+            </div>
+
+<div class="form-group">
+<label for="Lastname"> Lastname:</label>
+<input type="text" class="form-control" name="lname" #lname="ngModel" ngModel
+required [ngClass]="{'is-invalid' : frm.submitted && lname.invalid}" placeholder="Enter Your Lastname">
+<div *ngIf="frm.submitted && lname.invalid" class="invalid-feedback"> Lastname is Required</div>
+</div>
+
+<div class="form-group">
+<label for="Email"> Email:</label>
+<input type="email" class="form-control" name="email" #email="ngModel" ngModel
+required [ngClass]="{'is-invalid' : frm.submitted && email.invalid}" placeholder="Enter Your email">
+<div *ngIf="frm.submitted && email.invalid" class="invalid-feedback"> Email is Required</div>
+</div>
+
+<div class="form-group">
+<label for="Password">Password:</label>
+<input type="password" class="form-control" name="psw" #psw="ngModel" ngModel
+required [ngClass]="{'is-invalid' : frm.submitted && psw.invalid}" placeholder="Enter Your Password">
+<div *ngIf="frm.submitted && psw.invalid" class="invalid-feedback"> Password is Required</div>
+</div>
+
+<div class="form-group">
+    <button type="submit" value="submit" class="btn btn-info mx-4 my-4">Submit</button>
+    <button type="reset" value="reset" class="btn btn-warning mx-4 my-4 ">Reset</button>
+</div>
+
+        </form>
+    </div>
+</section>

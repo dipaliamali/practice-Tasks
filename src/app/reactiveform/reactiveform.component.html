@@ -1,0 +1,49 @@
+<section>
+    <div class="container">
+        <h2 style="color: green;text-align: center; ">Registration Form</h2>
+        <form [formGroup]="reactiveForm"  (ngSubmit)="onSubmitForm()">
+            <div class="form-group">
+                <label>Firstname</label>
+                <input type="text" class="form-control" name="fname" formControlName="fname"
+            required [ngClass]="{'is -invalid':isSubmitted && f.fname.errors}">
+     <div *ngIf="isSubmitted && f.fname.errors?.required" class="invalid-feedback"> Enter Your Firstname</div>
+    </div> 
+     
+     <div class="form-group">
+        <label>Lastname</label>
+        <input type="text" class="form-control" name="lname" formControlName="lname"
+    required [ngClass]="{'is -invalid':isSubmitted && f.lname.errors}">
+<div *ngIf="isSubmitted && f.lname.errors?.required" class="invalid-feedback"> Enter Your lastname</div>
+</div>
+
+<div class="form-group">
+    <label>Email</label>
+    <input type="text" class="form-control" name="email" formControlName="email"
+required [ngClass]="{'is -invalid':isSubmitted && f.email.errors}">
+<div *ngIf="isSubmitted && f.email.errors?.required" class="invalid-feedback"> Enter Your Email</div>
+<div *ngIf="isSubmitted && f.email.errors?.pattern" class="invalid-feedback"> Enter Valid Email</div>
+</div>
+
+<div class="form-group">
+    <label>Password</label>
+    <input type="password" class="form-control" name="password" formControlName="password"
+required [ngClass]="{'is -invalid':isSubmitted && f.password.errors}">
+<div *ngIf="isSubmitted && f.password.errors?.required" class="invalid-feedback"> Enter Your Password</div>
+</div>
+
+<div class="form-group">
+    <label>Confirm Password</label>
+    <input type="password" class="form-control" name="cpassword" formControlName="cpassword"
+required [ngClass]="{'is -invalid':isSubmitted && f.cpassword.errors}">
+<div *ngIf="isSubmitted && f.cpassword.errors?.required" class="invalid-feedback">Confirm Your Password</div>
+</div>
+
+<div class="form-group">
+    <input type="submit" value="Submit" class="btn btn-info">
+    <input type="reset" value="Reset" class="btn btn-primary m-3">
+    </div>
+    
+        </form>
+
+    </div>
+</section>

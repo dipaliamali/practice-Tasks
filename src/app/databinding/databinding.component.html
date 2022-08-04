@@ -1,0 +1,48 @@
+<h1 style="text-align:center; color:blueviolet; border: solid black;">DataBinding Types</h1> 
+
+<!--1. Interpolation -->
+
+<h2>Welcome to {{ Name}}</h2>
+<p> Inxise Datalabs {{Specialization}} </p>
+
+<br><br>
+
+<!--2. Property & Attribute Binding -->
+
+<!-- <h4>Example 1</h4> -->
+
+
+<img [src] = "image" alt="" class="mx-auto d-block">
+
+<br><br>
+
+<!-- <h4>Example 2</h4> -->
+
+<div class="container">
+   
+<a [href]="link">Go to Merren Official website</a>
+
+</div>
+<br><br>
+
+<!--3. Event Binding -->
+
+<button type="button" class="btn btn-secondary btn-lg mx-auto d-block" (click)="onClick()">Subscribe to Youtube</button>
+
+<br><br>
+
+<button type="button" class="btn btn-success btn-lg mx-auto d-block" (click)="onSubmit()">Submit Your Application Here...</button>
+
+<br> <br>
+
+<!--4. Two Way Data Binding -->
+
+<input type="text" name="Temp"  [(ngModel)]="Temp" class="mx-auto d-block"> 
+
+  <h1 style="text-align:center"> {{Temp}}</h1>
+
+
+
+
+
+<br><br><br><br>
